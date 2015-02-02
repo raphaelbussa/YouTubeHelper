@@ -44,7 +44,6 @@ import rebus.youtube.helper.UploadItem;
 import rebus.youtube.helper.UploadParser;
 import rebus.youtube.helper.sample.adapter.ListAdapter;
 
-
 public class MainActivity extends ActionBarActivity {
 
     private Toolbar toolbar;

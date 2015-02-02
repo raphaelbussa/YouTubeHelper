@@ -49,7 +49,7 @@ dependencies {
 }
 
 publish {
-    userOrg = 'rebus007'
+    userOrg = 'raphaelbussa'
     groupId = 'rebus'
     artifactId = 'YouTubeHelper'
     version = '1.0.0'

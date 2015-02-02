@@ -82,3 +82,13 @@ Other methods are used in the same way
 - Related video list
 - Details video items
 - Info user items
+
+###Sample
+Some sample code is present in the repo
+
+[ ![Browse code](http://dabuttonfactory.com/b.png?t=Browse code&f=Calibri-Bold&ts=24&tc=ffffff&c=5&bgt=unicolored&bgc=47c&hp=20&vp=11) ](https://github.com/rebus007/YouTubeHelper/tree/master/app/src/main)
+
+You can also download sample apk, it show last video from PewDiePie end also PewDiePie user information
+
+[ ![Download](http://dabuttonfactory.com/b.png?t=Sample.apk&f=Calibri-Bold&ts=24&tc=ffffff&c=5&bgt=unicolored&bgc=47c&hp=20&vp=11) ](https://github.com/rebus007/YouTubeHelper/releases/tag/1.0.0)
+

@@ -97,19 +97,19 @@ public class UploadParser extends AsyncTask{
             for (Element entry : entrys) {
                 UploadItem item = new UploadItem();
                 item.setIdVideo(entry.getElementsByTag("id").text().replace("http://gdata.youtube.com/feeds/api/videos/", ""));
-                item.setThumbnail(entry.select("media|thumbnail[url]").first().attr("url"));
+                item.setThumbnail(entry.select("media|thumbnail").first().attr("url"));
                 item.setTitle(entry.getElementsByTag("title").text());
-                item.setViewCount(entry.select("yt|statistics[viewCount]").attr("viewCount"));
-                item.setDuration(entry.select("yt|duration[seconds]").attr("seconds"));
-                item.setRatingAverage(entry.select("gd|rating[average]").attr("average"));
+                item.setViewCount(entry.select("yt|statistics").attr("viewCount"));
+                item.setDuration(entry.select("yt|duration").attr("seconds"));
+                item.setRatingAverage(entry.select("gd|rating").attr("average"));
                 item.setDateVideo(entry.getElementsByTag("published").text());
                 if (showLog) {
                     Log.d(TAG_LOG, entry.getElementsByTag("id").text().replace("http://gdata.youtube.com/feeds/api/videos/", ""));
-                    Log.d(TAG_LOG, entry.select("media|thumbnail[url]").first().attr("url"));
+                    Log.d(TAG_LOG, entry.select("media|thumbnail").first().attr("url"));
                     Log.d(TAG_LOG, entry.getElementsByTag("title").text());
-                    Log.d(TAG_LOG, entry.select("yt|statistics[viewCount]").attr("viewCount"));
-                    Log.d(TAG_LOG, entry.select("yt|duration[seconds]").attr("seconds"));
-                    Log.d(TAG_LOG, entry.select("gd|rating[average]").attr("average"));
+                    Log.d(TAG_LOG, entry.select("yt|statistics").attr("viewCount"));
+                    Log.d(TAG_LOG, entry.select("yt|duration").attr("seconds"));
+                    Log.d(TAG_LOG, entry.select("gd|rating").attr("average"));
                     Log.d(TAG_LOG, entry.getElementsByTag("published").text());
                 }
                 listVideo.add(item);

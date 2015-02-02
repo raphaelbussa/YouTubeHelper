@@ -105,13 +105,13 @@ public class CommentsParser extends AsyncTask {
                 Document image  = Jsoup.connect(entry.getElementsByTag("uri").text())
                         .userAgent("Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.172 Safari/537.22")
                         .timeout(60000).ignoreContentType(true).get();
-                commentsItem.setThumbnail(image.select("media|thumbnail[url]").attr("url"));
+                commentsItem.setThumbnail(image.select("media|thumbnail").attr("url"));
                 if (showLog) {
                     Log.d(TAG_LOG, entry.getElementsByTag("published").text());
                     Log.d(TAG_LOG, entry.getElementsByTag("content").text());
                     Log.d(TAG_LOG, entry.getElementsByTag("name").text());
                     Log.d(TAG_LOG, entry.getElementsByTag("yt:replyCount").text());
-                    Log.d(TAG_LOG, image.select("media|thumbnail[url]").attr("url"));
+                    Log.d(TAG_LOG, image.select("media|thumbnail").attr("url"));
                 }
                 commentsItems.add(commentsItem);
             }

@@ -84,38 +84,38 @@ public class VideoParser extends AsyncTask {
                     .timeout(60000).ignoreContentType(true).get();
             values.setTitleVideo(feed.getElementsByTag("title").text());
             values.setDescriptionVideo(feed.getElementsByTag("media:description").text());
-            values.setLikeVideo(feed.select("yt|rating[numLikes]").attr("numLikes"));
-            values.setDislikeVideo(feed.select("yt|rating[numDislikes]").attr("numDislikes"));
-            values.setAverageVideo(feed.select("gd|rating[average]").attr("average"));
-            values.setViewsVideo(feed.select("yt|statistics[viewCount]").attr("viewCount"));
-            values.setDurationVideo(feed.select("yt|duration[seconds]").attr("seconds"));
-            values.setThumbnailVideo(feed.select("media|thumbnail[url]").first().attr("url"));
-            values.setUrlMediaVideo(feed.select("media|content[url]").get(1).attr("url"));
+            values.setLikeVideo(feed.select("yt|rating").attr("numLikes"));
+            values.setDislikeVideo(feed.select("yt|rating").attr("numDislikes"));
+            values.setAverageVideo(feed.select("gd|rating").attr("average"));
+            values.setViewsVideo(feed.select("yt|statistics").attr("viewCount"));
+            values.setDurationVideo(feed.select("yt|duration").attr("seconds"));
+            values.setThumbnailVideo(feed.select("media|thumbnail").first().attr("url"));
+            values.setUrlMediaVideo(feed.select("media|[url]").get(1).attr("url"));
             values.setAuthorVideo(feed.getElementsByTag("name").text());
-            values.setNumberCommentsVideo(feed.select("gd|feedLink[countHint]").attr("countHint"));
-            values.setFeedCommentsVideo(feed.select("gd|feedLink[href]").attr("href"));
-            values.setCategoryVideo(feed.select("media|category[label]").attr("label"));
+            values.setNumberCommentsVideo(feed.select("gd|feedLink").attr("countHint"));
+            values.setFeedCommentsVideo(feed.select("gd|feedLink").attr("href"));
+            values.setCategoryVideo(feed.select("media|category").attr("label"));
             values.setDateVideo(feed.getElementsByTag("yt:uploaded").text());
             Document image  = Jsoup.connect(feed.getElementsByTag("uri").text())
                     .userAgent("Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.172 Safari/537.22")
                     .timeout(60000).ignoreContentType(true).get();
-            values.setThumbnailAuthor(image.select("media|thumbnail[url]").attr("url"));
+            values.setThumbnailAuthor(image.select("media|thumbnail").attr("url"));
             if(showLog) {
                 Log.d(TAG_LOG, feed.getElementsByTag("title").text());
                 Log.d(TAG_LOG, feed.getElementsByTag("media:description").text());
-                Log.d(TAG_LOG, feed.select("yt|rating[numLikes]").attr("numLikes"));
-                Log.d(TAG_LOG, feed.select("yt|rating[numDislikes]").attr("numDislikes"));
-                Log.d(TAG_LOG, feed.select("gd|rating[average]").attr("average"));
-                Log.d(TAG_LOG, feed.select("yt|statistics[viewCount]").attr("viewCount"));
-                Log.d(TAG_LOG, feed.select("yt|duration[seconds]").attr("seconds"));
-                Log.d(TAG_LOG, feed.select("media|thumbnail[url]").first().attr("url"));
-                Log.d(TAG_LOG, feed.select("media|content[url]").get(1).attr("url"));
+                Log.d(TAG_LOG, feed.select("yt|rating").attr("numLikes"));
+                Log.d(TAG_LOG, feed.select("yt|rating").attr("numDislikes"));
+                Log.d(TAG_LOG, feed.select("gd|rating").attr("average"));
+                Log.d(TAG_LOG, feed.select("yt|statistics").attr("viewCount"));
+                Log.d(TAG_LOG, feed.select("yt|duration").attr("seconds"));
+                Log.d(TAG_LOG, feed.select("media|thumbnail").first().attr("url"));
+                Log.d(TAG_LOG, feed.select("media|content").get(1).attr("url"));
                 Log.d(TAG_LOG, feed.getElementsByTag("name").text());
-                Log.d(TAG_LOG, feed.select("gd|feedLink[countHint]").attr("countHint"));
-                Log.d(TAG_LOG, feed.select("gd|feedLink[href]").attr("href"));
-                Log.d(TAG_LOG, feed.select("media|category[label]").attr("label"));
+                Log.d(TAG_LOG, feed.select("gd|feedLink").attr("countHint"));
+                Log.d(TAG_LOG, feed.select("gd|feedLink").attr("href"));
+                Log.d(TAG_LOG, feed.select("media|category").attr("label"));
                 Log.d(TAG_LOG, feed.getElementsByTag("yt:uploaded").text());
-                Log.d(TAG_LOG, image.select("media|thumbnail[url]").attr("url"));
+                Log.d(TAG_LOG, image.select("media|thumbnail").attr("url"));
             }
         } catch (IOException e) {
             error = true;

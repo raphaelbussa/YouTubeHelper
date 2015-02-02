@@ -83,23 +83,24 @@ public class UserParser extends AsyncTask {
                     .userAgent("Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/25.0.1364.172 Safari/537.22")
                     .timeout(60000).ignoreContentType(true).get();
             user.setDescription(feed.getElementsByTag("content").text());
-            user.setThumbnail(feed.select("media|thumbnail[url]").attr("url"));
+            user.setThumbnail(feed.select("media|thumbnail").attr("url"));
             user.setLocation(feed.getElementsByTag("yt:location").text());
             user.setGooglePlusUserId(feed.getElementsByTag("yt:googlePlusUserId").text());
-            user.setSubscriberCount(feed.select("yt|statistics[subscriberCount]").attr("subscriberCount"));
-            user.setTotalUploadViews(feed.select("yt|statistics[totalUploadViews]").attr("totalUploadViews"));
-            user.setNumberUpload(feed.select("gd|feedLink[countHint]").get(4).attr("countHint"));
-            user.setFeedUpload(feed.select("gd|feedLink[rel]").get(4).attr("rel"));
+            user.setSubscriberCount(feed.select("yt|statistics").attr("subscriberCount"));
+            user.setTotalUploadViews(feed.select("yt|statistics").attr("totalUploadViews"));
+            user.setNumberUpload(feed.select("gd|feedLink").get(4).attr("countHint"));
+            user.setFeedUpload(feed.select("gd|feedLink").get(4).attr("href"));
             if (showLog) {
                 Log.d(TAG_LOG, feed.getElementsByTag("content").text());
-                Log.d(TAG_LOG, feed.select("media|thumbnail[url]").attr("url"));
+                Log.d(TAG_LOG, feed.select("media|thumbnail").attr("url"));
                 Log.d(TAG_LOG, feed.getElementsByTag("yt:location").text());
                 Log.d(TAG_LOG, feed.getElementsByTag("yt:googlePlusUserId").text());
-                Log.d(TAG_LOG, feed.select("yt|statistics[subscriberCount]").attr("subscriberCount"));
-                Log.d(TAG_LOG, feed.select("yt|statistics[totalUploadViews]").attr("totalUploadViews"));
-                Log.d(TAG_LOG, feed.select("gd|feedLink[countHint]").get(4).attr("countHint"));
-                Log.d(TAG_LOG, feed.select("gd|feedLink[rel]").get(4).attr("rel"));
+                Log.d(TAG_LOG, feed.select("yt|statistics").attr("subscriberCount"));
+                Log.d(TAG_LOG, feed.select("yt|statistics").attr("totalUploadViews"));
+                Log.d(TAG_LOG, feed.select("gd|feedLink").get(4).attr("countHint"));
+                Log.d(TAG_LOG, feed.select("gd|feedLink").get(4).attr("href"));
             }
+
         } catch (IOException e) {
             error = true;
             e.printStackTrace();

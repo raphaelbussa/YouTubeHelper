@@ -90,13 +90,7 @@ public class MainActivity extends ActionBarActivity {
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    }
-                });
-                listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-                    @Override
-                    public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                         detailsDialog(uploadVideo.get(position), MainActivity.this);
-                        return false;
                     }
                 });
             }

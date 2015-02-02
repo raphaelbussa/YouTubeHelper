@@ -90,7 +90,7 @@ public class VideoParser extends AsyncTask {
             values.setViewsVideo(feed.select("yt|statistics").attr("viewCount"));
             values.setDurationVideo(feed.select("yt|duration").attr("seconds"));
             values.setThumbnailVideo(feed.select("media|thumbnail").first().attr("url"));
-            values.setUrlMediaVideo(feed.select("media|[url]").get(1).attr("url"));
+            values.setUrlMediaVideo(feed.select("media|content").get(1).attr("url"));
             values.setAuthorVideo(feed.getElementsByTag("name").text());
             values.setNumberCommentsVideo(feed.select("gd|feedLink").attr("countHint"));
             values.setFeedCommentsVideo(feed.select("gd|feedLink").attr("href"));

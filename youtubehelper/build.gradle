@@ -33,7 +33,7 @@ android {
         minSdkVersion 8
         targetSdkVersion 21
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0.1"
     }
     buildTypes {
         release {
@@ -52,5 +52,5 @@ publish {
     userOrg = 'raphaelbussa'
     groupId = 'rebus'
     artifactId = 'YouTubeHelper'
-    version = '1.0.0'
+    version = '1.0.1'
 }

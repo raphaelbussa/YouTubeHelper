@@ -2,7 +2,7 @@
 This library is created for get information from YouTube, you can get upload video, user information, video details, comments video, related videos.
 
 ### Import
-At the moment the library is in my personal maven repo
+Now library is in jcenter, so just add this:
 ```Gradle
 dependencies {
     compile 'rebus:YouTubeHelper:1.1.0'

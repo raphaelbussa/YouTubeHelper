@@ -35,6 +35,7 @@ public class VideoItem {
     private String durationVideo;
     private String thumbnailVideo;
     private String authorVideo;
+    private String authorVideoId;
     private String numberCommentsVideo;
     private String feedCommentsVideo;
     private String categoryVideo;
@@ -151,5 +152,13 @@ public class VideoItem {
 
     public void setThumbnailAuthor(String thumbnailAuthor) {
         this.thumbnailAuthor = thumbnailAuthor;
+    }
+
+    public String getAuthorVideoId() {
+        return authorVideoId;
+    }
+
+    public void setAuthorVideoId(String authorVideoId) {
+        this.authorVideoId = authorVideoId;
     }
 }

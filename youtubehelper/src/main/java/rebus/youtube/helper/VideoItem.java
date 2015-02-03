@@ -34,7 +34,6 @@ public class VideoItem {
     private String viewsVideo;
     private String durationVideo;
     private String thumbnailVideo;
-    private String urlMediaVideo;
     private String authorVideo;
     private String numberCommentsVideo;
     private String feedCommentsVideo;
@@ -104,14 +103,6 @@ public class VideoItem {
 
     public void setThumbnailVideo(String thumbnailVideo) {
         this.thumbnailVideo = thumbnailVideo;
-    }
-
-    public String getUrlMediaVideo() {
-        return urlMediaVideo;
-    }
-
-    public void setUrlMediaVideo(String urlMediaVideo) {
-        this.urlMediaVideo = urlMediaVideo;
     }
 
     public String getAuthorVideo() {

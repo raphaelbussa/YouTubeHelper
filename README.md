@@ -12,7 +12,7 @@ repositories {
 ```
 ```Gradle
 dependencies {
-    compile 'rebus:YouTubeHelper:1.0.1'
+    compile 'rebus:YouTubeHelper:1.0.2'
 }
 ```
 

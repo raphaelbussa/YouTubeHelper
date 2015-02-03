@@ -90,7 +90,6 @@ public class VideoParser extends AsyncTask {
             values.setViewsVideo(feed.select("yt|statistics").attr("viewCount"));
             values.setDurationVideo(feed.select("yt|duration").attr("seconds"));
             values.setThumbnailVideo(feed.select("media|thumbnail").first().attr("url"));
-            values.setUrlMediaVideo(feed.select("media|content").get(1).attr("url"));
             values.setAuthorVideo(feed.getElementsByTag("name").text());
             values.setNumberCommentsVideo(feed.select("gd|feedLink").attr("countHint"));
             values.setFeedCommentsVideo(feed.select("gd|feedLink").attr("href"));
@@ -109,7 +108,6 @@ public class VideoParser extends AsyncTask {
                 Log.d(TAG_LOG, feed.select("yt|statistics").attr("viewCount"));
                 Log.d(TAG_LOG, feed.select("yt|duration").attr("seconds"));
                 Log.d(TAG_LOG, feed.select("media|thumbnail").first().attr("url"));
-                Log.d(TAG_LOG, feed.select("media|content").get(1).attr("url"));
                 Log.d(TAG_LOG, feed.getElementsByTag("name").text());
                 Log.d(TAG_LOG, feed.select("gd|feedLink").attr("countHint"));
                 Log.d(TAG_LOG, feed.select("gd|feedLink").attr("href"));

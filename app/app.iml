@@ -88,7 +88,7 @@
     <orderEntry type="library" exported="" name="support-v4-21.0.3" level="project" />
     <orderEntry type="library" exported="" name="jsoup-1.8.1" level="project" />
     <orderEntry type="library" exported="" name="picasso-2.4.0" level="project" />
-    <orderEntry type="library" exported="" name="YouTubeHelper-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="YouTubeHelper-1.0.2" level="project" />
   </component>
 </module>
 

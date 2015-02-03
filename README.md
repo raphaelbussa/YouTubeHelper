@@ -4,15 +4,8 @@ This library is created for get information from YouTube, you can get upload vid
 ### Import
 At the moment the library is in my personal maven repo
 ```Gradle
-repositories {
-    maven {
-        url 'http://dl.bintray.com/raphaelbussa/maven'
-    }
-}
-```
-```Gradle
 dependencies {
-    compile 'rebus:YouTubeHelper:1.0.2'
+    compile 'rebus:YouTubeHelper:1.1.0'
 }
 ```
 

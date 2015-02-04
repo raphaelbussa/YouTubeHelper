@@ -1,4 +1,4 @@
-# YouTubeHelper [ ![Download](https://api.bintray.com/packages/raphaelbussa/maven/YouTubeHelper/images/download.svg) ](https://bintray.com/raphaelbussa/maven/YouTubeHelper/_latestVersion)[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-YouTubeHelper-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1479)
+# YouTubeHelper [ ![Download](https://api.bintray.com/packages/raphaelbussa/maven/YouTubeHelper/images/download.svg) ](https://bintray.com/raphaelbussa/maven/YouTubeHelper/_latestVersion)[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-YouTubeHelper-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1479) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](http://opensource.org/licenses/MIT)
 This library is created for get information from YouTube, you can get upload video, user information, video details, comments video, related videos.
 
 ### Import
